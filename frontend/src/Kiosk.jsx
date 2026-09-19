@@ -204,17 +204,19 @@ export default function Kiosk() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-4 sm:p-8 mt-2 sm:mt-6 relative min-h-[80vh]">
+    <div className="max-w-4xl mx-auto p-4 sm:p-8 min-h-[80vh]">
       
-      <button 
-        onClick={resetDemo} 
-        className="absolute top-2 right-4 sm:right-8 text-slate-400 hover:text-indigo-600 flex items-center gap-1.5 text-sm font-semibold transition-colors bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm border border-slate-100 z-50"
-      >
-        <RotateCcw className="w-3.5 h-3.5" /> Restart Demo
-      </button>
+      <div className="flex justify-end mb-4 sm:mb-6">
+        <button 
+          onClick={resetDemo} 
+          className="text-slate-500 hover:text-indigo-600 flex items-center gap-1.5 text-sm font-semibold transition-colors bg-white px-3 py-1.5 rounded-full shadow-sm border border-slate-200"
+        >
+          <RotateCcw className="w-3.5 h-3.5" /> Restart Demo
+        </button>
+      </div>
 
       {/* Progress Indicator */}
-      <div className="mb-10 px-2 sm:px-6 mt-4">
+      <div className="mb-8 px-2 sm:px-6">
          <ProgressStepper steps={STEPS} currentStep={stage} />
       </div>
 
