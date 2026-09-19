@@ -34,7 +34,7 @@ Extract the clinical information into a concise medical term or value. If the an
 Return ONLY a JSON object with a single key "extractedValue" containing the string result.`;
 
       const response = await this.ai.models.generateContent({
-        model: 'gemini-2.5-flash',
+        model: 'gemini-3-flash-preview',
         contents: prompt,
         config: {
           responseMimeType: "application/json",
@@ -65,7 +65,7 @@ Patient Answer: "${answer}"
 Return ONLY a JSON object with a single key "category" containing the string result.`;
 
       const response = await this.ai.models.generateContent({
-        model: 'gemini-2.5-flash',
+        model: 'gemini-3-flash-preview',
         contents: prompt,
         config: {
           responseMimeType: "application/json",
